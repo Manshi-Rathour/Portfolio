@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', 'Noto Sans KR', 'Nunito Sans', sans-serif;
+    background-color: rgb(230, 250, 253);
+}
+
+
+.windsong-medium {
+    font-family: "WindSong", cursive;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 25px;
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 80px;
+    width: 100%; 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 1000;
+    background-color: transparent; 
+    transition: background-color 0.5s ease; 
+}
+
+.scrolled {
+    background-color: rgb(207, 250, 255); 
+    
+}
+
+
+
+.logo .bracket {
+    font-size: 2rem;
+    color: rgb(1, 40, 91);
+}
+
+.logo {
+    font-size: 1.2rem;
+    margin-left: 40px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(1, 40, 91);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav {
+    text-align: right;
+}
+
+.right-container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.right-container li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.right-container li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(1, 40, 91);
+}
+
+.right-container li a:hover {
+    text-decoration: underline;
+
+}
