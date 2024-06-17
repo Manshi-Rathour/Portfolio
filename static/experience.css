@@ -86,3 +86,21 @@ nav {
     text-decoration: underline;
 
 }
+
+
+@media (max-width: 1010px) {
+    #header {
+        flex-direction: column; 
+        align-items: flex-start; 
+        height: auto;
+    }
+
+    .right-container {
+        text-align: left; 
+        margin-top: 10px; 
+    }
+
+    .right-container li {
+        display: inline-block; 
+    }
+}

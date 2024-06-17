@@ -20,12 +20,14 @@ body {
 
 
 
+
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    height: 80px;
+    height: 100px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -97,6 +99,28 @@ nav {
 
 
 
+@media (max-width: 1010px) {
+    #header {
+        flex-direction: column; 
+        align-items: flex-start; 
+        height: auto;
+    }
+
+    .right-container {
+        text-align: left; 
+        margin-top: 10px; 
+    }
+
+    .right-container li {
+        display: inline-block; 
+    }
+}
+
+
+
+
+
+
 /* Main container */
 
 
@@ -155,8 +179,38 @@ nav {
 .icon-container img {
     width: 40px;
     height: 40px;
-    margin-right: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
+
+
+
+.resume-button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(1, 40, 91); 
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: rgb(2, 86, 196); 
+}
+
+.resume-button svg {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+
+
 
 
 /* Image container */
@@ -191,17 +245,49 @@ nav {
 
 
 
+/* Media Query for Center Alignment */
+@media (max-width: 910px) {
+    .outer-container {
+        flex-direction: column; 
+        align-items: center; 
+        height: auto; 
+    }
+
+    .inner-container {
+        width: 100%; 
+        text-align: center; 
+        margin-bottom: 30px; 
+    }
+
+    .icon-container {
+        justify-content: center;
+    }
+
+    .profile {
+        justify-content: center; 
+        align-items: center;
+        margin-top: -30px;
+    }
+
+}
+
+
+
+
+
+
+
+
 
 /* What I do */
 .bigContainer {
     width: 100%;
     /* height: 700px; */
     /* border: 2px solid red; */
-    margin-top: 70px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Optional: centers content horizontally */
 }
 
 #heading {
@@ -245,11 +331,11 @@ nav {
 
 .criteria {
     width: 100%;
-    height: 400px;
+    height: auto;
     /* border: 2px solid yellow; */
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .forImg {
@@ -287,11 +373,11 @@ nav {
 /*  */
 
 .forImg {
-    overflow: hidden; /* Ensures the image doesn't overflow its container */
-    position: relative; /* Ensure relative positioning for absolute positioning of image */
-    width: 100%; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    opacity: 0; /* Initially hide the container */
+    overflow: hidden; 
+    position: relative;
+    width: 100%;
+    height: auto;
+    opacity: 0; 
 }
 
 .forImg.active {
@@ -352,7 +438,31 @@ nav {
 
 
 
+@media (max-width: 910px) {
+    .criteria {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items horizontally */
+    }
 
+    .forImg {
+        order: 2; /* Change the order to appear below */
+        margin-top: -20px;
+    }
+
+    .details {
+        order: 1; /* Change the order to appear above */
+        text-align: center; /* Center align text */
+        
+    }
+
+    .icons-container {
+        justify-content: center; /* Center align icons */
+        flex-wrap: wrap; /* Prevent wrapping of icons */
+    }
+    .project-summary{
+        text-align: left;
+    }
+}
 
 
 
