@@ -39,6 +39,13 @@ window.onload = function() {
 
 
 
+
+
+
+
+
+
+
 // Intersection Observer for #heading
 document.addEventListener('DOMContentLoaded', () => {
     const heading = document.getElementById('heading');
@@ -52,6 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     observer.observe(heading);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

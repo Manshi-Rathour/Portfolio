@@ -201,7 +201,9 @@ nav {
 }
 
 .resume-button:hover {
-    background-color: rgb(2, 86, 196); 
+    background-color: transparent;
+    border: 2px solid rgb(1, 40, 91); 
+    color: rgb(1, 40, 91);
 }
 
 .resume-button svg {
