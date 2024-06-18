@@ -25,15 +25,24 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    height: 80px;
-    width: 100%; 
+    height: 100px;
+    width: 100%;
     position: fixed;
-    top: 0; 
-    left: 0; 
+    top: 0;
+    left: 0;
     z-index: 1000;
-    background-color: transparent; 
-    transition: background-color 0.5s ease; 
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 1s ease-out, transform 1s ease-out; 
 }
+
+#header.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .scrolled {
     background-color: rgb(207, 250, 255); 
@@ -103,4 +112,241 @@ nav {
     .right-container li {
         display: inline-block; 
     }
+}
+
+
+
+@media (max-width: 750px) {
+    #exp-bg {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .experience {
+        max-width: 100%; 
+        text-align: center; 
+    }
+}
+
+
+
+
+
+#exp-bg {
+    width: 100%;
+    height: auto;
+    /* border: 2px solid red; */
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+#exp-bg.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.experience {
+    flex: 1; 
+    height: 100%; 
+    /* border: 2px solid black; */
+    box-sizing: border-box; 
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(1, 40, 91);
+}
+
+.experience h1{
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.experience img {
+    max-width: 100%; 
+    max-height: 350px; 
+   
+}
+
+#exp-desc{
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgb(102, 128, 162);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#experience{
+    /* border: 2px solid red; */
+    margin-top: 50px;
+}
+
+#exp-head{
+    /* border: 2px solid black; */
+    text-align: center;
+}
+
+#exp-head h2{
+    font-weight: bold;
+    color: rgb(1, 40, 91);
+}
+
+
+
+
+
+
+
+.company-logo {
+    border-radius: 50%;
+    /* border: 2px solid black; */
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height to make it a square */
+    overflow: hidden; /* Hide any overflow to keep it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Optional, depending on your layout */
+    box-shadow: 7px 5px 10px rgba(43, 43, 43, 0.5);
+}
+
+.company-logo img {
+    width: 100%; /* Make the image fit the width of the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.clg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card-container {
+    width: 700px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.company-name {
+    background-color: rgb(158, 231, 244);
+    color: rgb(1, 40, 91);
+}
+
+.company-name h3,
+.company-name h6 {
+    font-weight: bold;
+}
+
+.company-details {
+    color: rgb(1, 40, 91);
+}
+
+.company-details .btn {
+    background-color: rgb(158, 231, 244);
+    color: rgb(1, 40, 91);
+}
+
+.company-details .btn:hover {
+    background-color: rgb(98, 231, 254);
+}
+
+.company-details p {
+    font-size: 15px;
+}
+
+.card-container .card-body {
+    background-color: rgb(230, 250, 253);
+}
+
+@media (max-width: 750px) {
+    .clg {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .company-logo {
+        margin-bottom: 10px;
+    }
+
+    .card-header.company-name {
+        text-align: center;
+    }
+
+    .card-container {
+        text-align: center;
+    }
+}
+
+.company-logo {
+    opacity: 0; /* Initially hidden */
+    
+}
+
+.company-logo.active{
+    animation: slideFromLeftRight 1s ease-out forwards; /* Apply animation to both elements */
+}
+
+@keyframes slideFromLeftRight {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0); /* Slide to its original position */
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+.body {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.body.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    color: rgb(1, 40, 91);
+    font-size: 1rem;
+    margin-top: 120px;
+    width: 100%;
 }
