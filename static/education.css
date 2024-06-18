@@ -376,7 +376,7 @@ nav {
 .body {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .body.animate {
@@ -394,7 +394,22 @@ nav {
 
 
 
-
+#moreproj{
+    display: flex;
+    justify-content: center;
+}
+#moreproj .btn{
+    background-color:  rgb(1, 40, 91);
+    color: white;
+    width: 200px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+#moreproj .btn:hover{
+    background-color: transparent;
+    color: rgb(1, 40, 91);
+    border: 2px solid rgb(1, 40, 91);
+}
 
 
 
