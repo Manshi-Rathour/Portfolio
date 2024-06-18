@@ -223,7 +223,8 @@ nav {
     margin-top: 100px;
 }
 #card-container{
-    width: 700px;
+    /* border: 2px solid red; */
+    width: 60%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -270,7 +271,8 @@ nav {
         text-align: center;
     }
     #card-container {
-        text-align: center;
+        text-align: left;
+        width: 90%;
     }
 }   
 
