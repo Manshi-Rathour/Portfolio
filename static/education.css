@@ -222,7 +222,7 @@ nav {
     align-items: center;
     margin-top: 100px;
 }
-.card{
+#card-container{
     width: 700px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -251,7 +251,7 @@ nav {
 .clg-details p{
     font-size: 15px;
 }
-.card-body{
+#card-container .card-body{
     background-color: rgb(230, 250, 253);
 }
 
@@ -269,7 +269,7 @@ nav {
     .card-header.clg-name {
         text-align: center;
     }
-    .card {
+    #card-container {
         text-align: center;
     }
 }   
@@ -281,7 +281,7 @@ nav {
     opacity: 0;
 }
 
-.card{
+#card-container{
     opacity: 0;
 }
 
@@ -300,6 +300,98 @@ nav {
         opacity: 1;
     }
 }
+
+
+
+
+#certifications{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    margin-top: 150px;
+}
+
+/* #certificates{
+    border: 2px solid red;
+} */
+
+#certificates h1{
+    font-weight: bold;
+    color: rgb(1, 40, 91);
+}
+
+.certificate{
+    align-items: center;
+    text-align: center;
+    box-shadow: 4px 15px 8px rgba(72, 72, 72, 0.5);
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.certificate img{
+    width: 100%;
+    height: 150px;
+    object-fit:contain;
+}
+
+
+
+
+.certificate a {
+    text-decoration: none;
+    color: rgb(1, 40, 91);
+}
+
+.certificate .card-body {
+    background-color: rgb(184, 244, 255);
+}
+
+
+
+#certificates {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 2s ease-out;
+    margin: 0; 
+}
+
+#certificates.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.certificate:hover{
+    box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+.body {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.body.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
 
 
 

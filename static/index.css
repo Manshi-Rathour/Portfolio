@@ -228,7 +228,8 @@ nav {
 .round-container {
     width: 400px;
     height: 400px;
-    background-color: #e0e0e0;
+    /* background-color: #e0e0e0; */
+    background-color: rgb(158, 231, 244);
     border-radius: 50%;
     /* This creates the round shape */
     display: flex;
@@ -240,8 +241,10 @@ nav {
 .round-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit:cover; */
+    object-fit: contain;
     border-radius: 50%;
+   
 }
 
 

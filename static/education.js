@@ -74,3 +74,68 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
 });
+
+
+
+
+
+
+
+
+
+
+
+// Intersection Observer for #heading
+document.addEventListener('DOMContentLoaded', () => {
+    const heading = document.getElementById('certificates');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                heading.classList.add('visible');
+            }
+        });
+    });
+
+    observer.observe(heading);
+});
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var cards = document.querySelectorAll('.body');
+    
+    function animateCards() {
+        cards.forEach(function(card) {
+            if (isElementInViewport(card) && !card.classList.contains('animate')) {
+                card.classList.add('animate');
+            }
+        });
+    }
+
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Initially animate cards in view on page load
+    animateCards();
+
+    // Listen for scroll events to animate cards in view
+    window.addEventListener('scroll', function() {
+        animateCards();
+    });
+
+    // Listen for page refresh or load to animate cards
+    window.addEventListener('load', function() {
+        animateCards();
+    });
+});
