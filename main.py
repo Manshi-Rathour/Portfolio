@@ -1,40 +1,34 @@
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
-from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+app.static_folder = 'static'
+app.template_folder = 'templates'
 
 
-
-app = FastAPI()
-
-# Mount a static directory for serving CSS and JavaScript files
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 
-@app.get("/", response_class=HTMLResponse)
-async def read_root(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
-@app.get("/contact", response_class=HTMLResponse)
-async def read_root(request: Request):
-    return templates.TemplateResponse("contact.html", {"request": request})
+@app.route("/education")
+def education():
+    return render_template("education.html")
 
 
-@app.get("/education", response_class=HTMLResponse)
-async def read_root(request: Request):
-    return templates.TemplateResponse("education.html", {"request": request})
+@app.route("/experience")
+def experience():
+    return render_template("experience.html")
 
 
-@app.get("/experience", response_class=HTMLResponse)
-async def read_root(request: Request):
-    return templates.TemplateResponse("experience.html", {"request": request})
-
-
-@app.get("/projects", response_class=HTMLResponse)
-async def read_root(request: Request):
-    return templates.TemplateResponse("projects.html", {"request": request})
+@app.route("/projects")
+def projects():
+    return render_template("projects.html")
 
 
 if __name__ == '__main__':
