@@ -204,6 +204,7 @@ nav {
 .card{
     margin-top: 30px;
     background-color: rgb(158, 231, 244);
+    box-shadow: 0 7px 7px 0 rgba(90, 126, 170, 0.5);
     /* height: 250px; */
     color: rgb(1, 40, 91);
 }
